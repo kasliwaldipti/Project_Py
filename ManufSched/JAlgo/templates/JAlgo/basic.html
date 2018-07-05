@@ -10,10 +10,9 @@
             <a class="nav-link" href="#">Login</a>
         </li>
     </ul>
-    <h5>&nbsp &nbsp The output of the algorithm is: </h5>
 {% block content %}
-   	{% for c in content %}
-		&nbsp &nbsp<label style="color: green"><b><em>{{c}}</em></b></label>
+	{% for c in content %}
+   		<br><label>&nbsp&nbsp&nbsp&nbsp{{c}}</label>
 	{% endfor %}
 {% endblock %}
     

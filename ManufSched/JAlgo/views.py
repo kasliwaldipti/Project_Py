@@ -23,9 +23,10 @@ def algo_op(request):
             first.append(j)
         else:
             last.append(j)
-
-    print("\nJobs that will go first:",first)
-    print("Jobs that will go last:",last)
+    first1=first
+    last1=last
+    print("\nJobs that will go first:",first1)
+    print("Jobs that will go last:",last1)
 
     for k in range(0, len(first)):
         for j in range(0,len(first)-1):
@@ -48,7 +49,7 @@ def algo_op(request):
 
     print("\nFinal sequence:",first+last)
     #return HttpResponse(job1+job2)
-    return render(request, 'JAlgo/basic.html', {'content': [(first),(last),(first+last)]})
+    return render(request, 'JAlgo/basic.html', {'content': ['The jobs: ',PT,'Jobs that will go first: ',first1,'Jobs that will go last: ',last1,'Jobs going first arranged in ascending order: ',first,'Jobs going last arranged in descending order: ',last,'Final Sequence: ',(first+last)]})
 
 def index (request):
     return render(request, 'JAlgo/home.html')
